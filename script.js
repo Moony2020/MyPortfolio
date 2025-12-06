@@ -14,6 +14,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             // Close mobile menu after clicking
             if (window.innerWidth <= 768) {
                 navLinks.classList.remove('active');
+                menuToggle.textContent = '☰';
             }
         }
     });
