@@ -14,7 +14,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             // Close mobile menu after clicking
             if (window.innerWidth <= 768) {
                 navLinks.classList.remove('active');
-                menuToggle.textContent = '☰';
+                menuToggle.innerHTML = '<img width="48" height="48" src="https://img.icons8.com/pulsar-gradient/48/xbox-menu.png" alt="xbox-menu"/>';
             }
         }
     });
@@ -46,7 +46,8 @@ window.addEventListener('scroll', () => {
 // Mobile menu toggle
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+    const menuIcon = '<img width="48" height="48" src="https://img.icons8.com/pulsar-gradient/48/xbox-menu.png" alt="xbox-menu"/>';
+    menuToggle.innerHTML = navLinks.classList.contains('active') ? '✕' : menuIcon;
 });
 
 // ===================================
@@ -177,7 +178,7 @@ const handleResize = debounce(() => {
     // Close mobile menu on resize to desktop
     if (window.innerWidth > 768) {
         navLinks.classList.remove('active');
-        menuToggle.textContent = '☰';
+        menuToggle.innerHTML = '<img width="48" height="48" src="https://img.icons8.com/pulsar-gradient/48/xbox-menu.png" alt="xbox-menu"/>';
     }
 }, 250);
 
