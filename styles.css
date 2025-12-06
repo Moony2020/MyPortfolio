@@ -279,7 +279,7 @@ p {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: transparent !important;
   display: flex !important;
   /* Ensure flex is applied when active if media query triggers it */
 }
