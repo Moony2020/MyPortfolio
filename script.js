@@ -174,15 +174,20 @@ function debounce(func, wait) {
 // ===================================
 // Window Resize Handler
 // ===================================
-const handleResize = debounce(() => {
+let resizeTimer;
+window.addEventListener("resize", () => {
+    document.body.classList.add("resize-animation-stopper");
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        document.body.classList.remove("resize-animation-stopper");
+    }, 400);
+
     // Close mobile menu on resize to desktop
     if (window.innerWidth > 768) {
         navLinks.classList.remove('active');
         menuToggle.innerHTML = '<img width="48" height="48" src="https://img.icons8.com/pulsar-gradient/48/xbox-menu.png" alt="xbox-menu"/>';
     }
-}, 250);
-
-window.addEventListener('resize', handleResize);
+});
 
 // ===================================
 // Page Load Animation

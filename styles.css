@@ -60,6 +60,11 @@ body.light-mode {
 /* ===================================
    Base Styles & Reset
    =================================== */
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
 * {
   margin: 0;
   padding: 0;
