@@ -14,7 +14,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             // Close mobile menu after clicking
             if (window.innerWidth <= 768) {
                 navLinks.classList.remove('active');
-                menuToggle.classList.remove('active');
+                menuToggle.textContent = '☰';
             }
         }
     });
@@ -46,7 +46,7 @@ window.addEventListener('scroll', () => {
 // Mobile menu toggle
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    menuToggle.classList.toggle('active');
+    menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
 });
 
 // ===================================
@@ -177,7 +177,7 @@ const handleResize = debounce(() => {
     // Close mobile menu on resize to desktop
     if (window.innerWidth > 768) {
         navLinks.classList.remove('active');
-        menuToggle.classList.remove('active');
+        menuToggle.textContent = '☰';
     }
 }, 250);
 
