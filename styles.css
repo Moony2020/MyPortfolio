@@ -261,7 +261,7 @@ p {
   background: none;
   border: none;
   color: var(--text-primary);
-  font-size: 2rem;
+  font-size: 1.75rem;
   cursor: pointer;
   padding: 0;
   line-height: 1;
@@ -276,7 +276,10 @@ p {
 }
 
 .menu-toggle.active {
-  color: var(--accent-primary);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   display: flex !important;
   /* Ensure flex is applied when active if media query triggers it */
 }
