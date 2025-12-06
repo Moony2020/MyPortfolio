@@ -255,13 +255,12 @@ p {
 }
 
 /* Mobile Menu Toggle */
-/* Mobile Menu Toggle */
 .menu-toggle {
   display: none;
   background: none;
   border: none;
   color: var(--text-primary);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   cursor: pointer;
   padding: 0;
   line-height: 1;
@@ -277,9 +276,10 @@ p {
 
 .menu-toggle.active {
   background: var(--gradient-primary);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: transparent;
   display: flex !important;
   /* Ensure flex is applied when active if media query triggers it */
 }
